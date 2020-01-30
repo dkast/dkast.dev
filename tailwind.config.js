@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ["Space Mono", "sans-serif"],
+      display: ["Bitter", "sans-serif"],
       body: ["Hind", "sans-serif"],
       sub: ["Roboto Mono", "sans-serif"]
     },

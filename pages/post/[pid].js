@@ -18,7 +18,7 @@ const Post = ({ post, relatedPosts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="my-16 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
-        <h1 className="font-display tracking-tighter font-bold text-5xl text-center">
+        <h1 className="font-display font-bold text-5xl text-center">
           {post.fields.title}
         </h1>
         <div className="text-center">

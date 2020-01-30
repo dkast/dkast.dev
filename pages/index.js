@@ -9,14 +9,17 @@ import PostItem from "../components/postItem";
 const Home = props => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
-      <h1 className="font-display text-3xl tracking-tighter">
+      <h1 className="font-display text-5xl mb-6">
         <strong>Hola,</strong>
         <br />
         mi nombre es{" "}
-        <span className="text-red-500 bg-red-100">Daniel Castillejo</span>, soy
-        Desarrollador de Software, entusiasta del Diseño y amante de la Música.
+        <span className="text-red-500 bg-red-100">Daniel Castillejo</span>.
       </h1>
-      <div className="flex justify-between w-1/3 mx-auto mt-8 mb-32">
+      <h2 className="font-display text-2xl">
+        Soy Desarrollador de Software, entusiasta del Diseño y amante de la
+        Música.
+      </h2>
+      <div className="flex justify-between w-1/3 mt-8 mb-32">
         <div className="hover:bg-gray-900 hover:text-white text-gray-600 rounded-full">
           <a href="https:\\github.com\dkast" className="p-2 block">
             <GitHub></GitHub>
