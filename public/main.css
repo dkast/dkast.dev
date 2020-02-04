@@ -18,6 +18,10 @@ p > a:hover {
   @apply text-red-700;
 }
 
+h1 {
+  @apply text-4xl font-display mb-2 text-gray-900;
+}
+
 @tailwind components;
 
 @tailwind utilities;

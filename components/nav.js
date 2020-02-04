@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-import Logo from "./logo";
+import Icon from "./icon";
 
 const Nav = () => (
   <nav className="flex justify-between items-center mt-8 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
     <Link href="/">
       <a>
-        <Logo width="32" height="32" bgColor="#1A202C"></Logo>
+        <Icon width="40" height="40" bgColor="#1A202C"></Icon>
       </a>
     </Link>
     <ul className="font-sub font-bold hover:text-gray-600">
