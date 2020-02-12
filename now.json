@@ -1,7 +1,7 @@
 {
   "name": "dkast.now.sh",
   "version": 2,
-  "alias": "next-dkast",
+  "alias": "dkast",
   "build": {
     "env": {
       "SPACE_ID": "@blog_spaceid",
