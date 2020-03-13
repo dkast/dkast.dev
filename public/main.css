@@ -2,10 +2,6 @@
 
 @tailwind base;
 
-body {
-  @apply text-gray-900;
-}
-
 p {
   @apply mb-6;
 }
@@ -20,6 +16,18 @@ p > a:hover {
 
 h1 {
   @apply text-4xl font-display mb-2 text-gray-900;
+}
+
+h2 {
+  @apply text-3xl font-display mb-2 text-gray-900;
+}
+
+h3 {
+  @apply text-2xl font-display mb-2 text-gray-900;
+}
+
+.bg-dark-mode {
+  background-color: #121212;
 }
 
 @tailwind components;

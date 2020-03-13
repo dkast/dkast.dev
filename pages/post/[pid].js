@@ -18,7 +18,7 @@ const Post = ({ post, relatedPosts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="my-16 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
-        <h1 className="font-display font-bold text-5xl text-center">
+        <h1 className="font-display font-bold text-5xl text-center dark-mode:text-gray-300">
           {post.fields.title}
         </h1>
         <div className="text-center">
@@ -33,7 +33,7 @@ const Post = ({ post, relatedPosts }) => {
           </span>
         </div>
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
-        <div className="font-body font-light text-xl text-gray-700 leading-relaxed mx-auto mt-16">
+        <div className="font-body font-light text-xl text-gray-700 dark-mode:text-gray-400 leading-relaxed mx-auto mt-16">
           <ReactMarkDown source={post.fields.body}></ReactMarkDown>
         </div>
       </div>

@@ -4,13 +4,15 @@ import ReactMarkdown from "react-markdown";
 import { createClient } from "contentful";
 
 import Layout from "../components/layout";
+import Heading from "../components/heading";
 
 const About = props => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
       <ReactMarkdown
         source={props.page.fields.body}
-        className="font-body font-light text-xl text-gray-700"
+        renderers={{ heading: Heading }}
+        className="font-body font-light text-xl text-gray-700 dark-mode:text-gray-400"
       />
     </div>
   </Layout>

@@ -5,8 +5,15 @@ module.exports = {
       body: ["Hind", "sans-serif"],
       sub: ["Roboto Mono", "sans-serif"]
     },
-    extend: {}
+    extend: {
+      colors: {
+        "dark-gray": "#121212"
+      },
+      screens: {
+        "dark-mode": { raw: "(prefers-color-scheme: dark)" }
+      }
+    }
   },
   variants: {},
-  plugins: []
+  plugins: [require("@tailwindcss/ui")]
 };

@@ -9,13 +9,16 @@ import PostItem from "../components/postItem";
 const Home = props => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
-      <h1 className="font-display text-5xl mb-6">
+      <h1 className="font-display text-5xl mb-6 dark-mode:text-gray-300">
         <strong>Hola,</strong>
         <br />
         mi nombre es{" "}
-        <span className="text-red-500 bg-red-100">Daniel Castillejo</span>.
+        <span className="text-red-500 bg-red-100 dark-mode:bg-red-500 dark-mode:text-red-200">
+          Daniel Castillejo
+        </span>
+        .
       </h1>
-      <h2 className="font-display text-2xl">
+      <h2 className="font-display text-2xl dark-mode:text-gray-300">
         Soy Desarrollador de Software, entusiasta del Diseño y amante de la
         Música.
       </h2>
@@ -36,7 +39,9 @@ const Home = props => (
           </a>
         </div>
       </div>
-      <h2 className="font-body text-xl mb-4 text-gray-600">Últimas entradas</h2>
+      <h2 className="font-body text-xl mb-4 text-gray-600 dark-mode:text-gray-300">
+        Últimas entradas
+      </h2>
       {props.posts.map(post => (
         <PostItem key={post.sys.id} post={post} />
       ))}
