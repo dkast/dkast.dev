@@ -26,10 +26,6 @@ h3 {
   @apply text-2xl font-display mb-2 text-gray-900;
 }
 
-.bg-dark-mode {
-  background-color: #121212;
-}
-
 @tailwind components;
 
 @tailwind utilities;

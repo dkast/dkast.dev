@@ -18,13 +18,13 @@ const Post = ({ post, relatedPosts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="my-16 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
-        <h1 className="font-display font-bold text-5xl text-center dark-mode:text-gray-300">
+        <h1 className="font-display font-bold text-5xl text-center">
           {post.fields.title}
         </h1>
         <div className="text-center">
           <span className="text-gray-600 font-sub tracking-tight">
             {format(new Date(post.sys.createdAt), "dd LLL, yyyy", {
-              locale: esLocale
+              locale: esLocale,
             })}
           </span>
           <span className="text-gray-600 ml-6 font-sub tracking-tight">
@@ -33,7 +33,7 @@ const Post = ({ post, relatedPosts }) => {
           </span>
         </div>
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
-        <div className="font-body font-light text-xl text-gray-700 dark-mode:text-gray-400 leading-relaxed mx-auto mt-16">
+        <div className="font-body font-light text-xl text-gray-700 leading-relaxed mx-auto mt-16">
           <ReactMarkDown source={post.fields.body}></ReactMarkDown>
         </div>
       </div>
@@ -41,16 +41,16 @@ const Post = ({ post, relatedPosts }) => {
   );
 };
 
-Post.getInitialProps = async context => {
+Post.getInitialProps = async (context) => {
   const { pid } = context.query;
   const client = createClient({
     space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN
+    accessToken: process.env.ACCESS_TOKEN,
   });
 
   const post = await client.getEntries({
     content_type: "blogPost",
-    "fields.slug": pid
+    "fields.slug": pid,
   });
 
   let tags;
@@ -63,18 +63,18 @@ Post.getInitialProps = async context => {
       "fields.tags[in]": tags,
       "sys.id[ne]": post.items[0].sys.id,
       order: "-sys.createdAt",
-      limit: 3
+      limit: 3,
     });
   } else {
     tags = [];
     relatedPosts = {
-      items: []
+      items: [],
     };
   }
 
   return {
     post: post.items[0],
-    relatedPosts: relatedPosts.items
+    relatedPosts: relatedPosts.items,
   };
 };
 
