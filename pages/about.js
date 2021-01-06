@@ -1,34 +1,46 @@
 import React from "react";
 import Head from "next/head";
-import ReactMarkdown from "react-markdown";
 import { createClient } from "contentful";
+import renderToString from "next-mdx-remote/render-to-string";
+import hydrate from "next-mdx-remote/hydrate";
 
 import Layout from "../components/layout";
 
-const About = (props) => (
-  <Layout>
-    <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
-      <ReactMarkdown
+const About = ({ mdxSource }) => {
+  const content = hydrate(mdxSource, {});
+
+  return (
+    <Layout>
+      <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
+        {/* <ReactMarkdown
         source={props.page.fields.body}
         className="font-body font-light text-xl text-gray-700"
-      />
-    </div>
-  </Layout>
-);
+      /> */}
+        <div className="font-body font-light text-xl text-gray-700">
+          {content}
+        </div>
+      </div>
+    </Layout>
+  );
+};
 
 About.getInitialProps = async () => {
   const client = createClient({
     space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN,
+    accessToken: process.env.ACCESS_TOKEN
   });
 
-  const res = await client.getEntries({
+  const pageQuery = await client.getEntries({
     content_type: "page",
-    "fields.menuId": "about",
+    "fields.menuId": "about"
   });
+
+  const page = pageQuery.items[0];
+  const mdxSource = await renderToString(page.fields.body, {});
 
   return {
-    page: res.items[0],
+    page: page,
+    mdxSource: mdxSource
   };
 };
 
