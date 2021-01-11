@@ -7,8 +7,10 @@ module.exports = {
       fontFamily: {
         display: ["Bitter", "sans-serif"],
         body: ["Hind", "sans-serif"],
-        sub: ["Roboto Mono", "sans-serif"]
+        sub: ["Roboto Mono", "sans-serif"],
+        sans: ["Hind", ...fontFamily.sans]
       }
-    }
+    },
+    plugins: [require("@tailwindcss/typography")]
   }
 };

@@ -32,9 +32,7 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
           </span>
         </div>
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
-        <div className="font-body font-light text-xl text-gray-700 leading-relaxed mx-auto mt-16">
-          {content}
-        </div>
+        <div className="prose mx-auto mt-16">{content}</div>
       </div>
     </Layout>
   );
