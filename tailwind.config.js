@@ -9,8 +9,15 @@ module.exports = {
         body: ["Hind", "sans-serif"],
         sub: ["Roboto Mono", "sans-serif"],
         sans: ["Hind", ...fontFamily.sans]
+      },
+      typography: theme => {
+        DEFAULT: {
+          css: {
+            color: theme("colors.gray.700");
+          }
+        }
       }
-    },
-    plugins: [require("@tailwindcss/typography")]
-  }
+    }
+  },
+  plugins: [require("@tailwindcss/typography")]
 };
