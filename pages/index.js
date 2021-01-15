@@ -6,14 +6,16 @@ import { createClient } from "contentful";
 import Layout from "../components/layout";
 import PostItem from "../components/postItem";
 
-const Home = (props) => (
+const Home = props => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
-      <h1 className="font-display text-5xl mb-6">
-        <strong>Hola,</strong>
+      <h1 className="font-display font-semibold text-5xl mb-6">
+        Hola,
         <br />
         mi nombre es{" "}
-        <span className="text-red-500 bg-red-100">Daniel Castillejo</span>.
+        <span className="bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
+          Daniel Castillejo
+        </span>
       </h1>
       <h2 className="font-display text-2xl">
         Soy Desarrollador de Software, entusiasta del Diseño y amante de la
@@ -37,7 +39,7 @@ const Home = (props) => (
         </div>
       </div>
       <h2 className="font-body text-xl mb-4 text-gray-600">Últimas entradas</h2>
-      {props.posts.map((post) => (
+      {props.posts.map(post => (
         <PostItem key={post.sys.id} post={post} />
       ))}
     </div>
@@ -47,17 +49,17 @@ const Home = (props) => (
 Home.getInitialProps = async () => {
   const client = createClient({
     space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN,
+    accessToken: process.env.ACCESS_TOKEN
   });
 
   const res = await client.getEntries({
     content_type: "blogPost",
     limit: 10,
-    order: "-sys.createdAt",
+    order: "-sys.createdAt"
   });
 
   return {
-    posts: res.items,
+    posts: res.items
   };
 };
 

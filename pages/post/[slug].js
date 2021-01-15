@@ -54,7 +54,7 @@ Post.getInitialProps = async context => {
 
   let tags;
   let relatedPosts;
-  if (postQuery.items[0].fields.hasOwnProperty(tags)) {
+  if (postQuery?.items[0]?.fields.hasOwnProperty(tags)) {
     tags = postQuery.items[0].fields.tags.toString();
     relatedPosts = await client.getEntries({
       content_type: "blogPost",

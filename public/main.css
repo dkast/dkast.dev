@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Bitter:400,400i,700|Hind:300,400,700&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Fraunces:400,400i,700|Hind:300,400,700&display=swap");
 
   h1 {
-    @apply text-3xl font-display mb-2 text-gray-900;
+    @apply font-display mb-2 text-gray-900;
   }
 
   h2 {
-    @apply text-2xl font-display mb-2 text-gray-900;
+    @apply font-display mb-2 text-gray-900;
   }
 
   h3 {
-    @apply text-xl font-display mb-2 text-gray-900;
+    @apply font-display mb-2 text-gray-900;
   }
 }

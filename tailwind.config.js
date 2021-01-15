@@ -1,11 +1,15 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: ["./pages/**/*.js", "./components/**/*.js"],
   theme: {
     extend: {
+      colors: {
+        orange: colors.orange
+      },
       fontFamily: {
-        display: ["Bitter", "sans-serif"],
+        display: ["Fraunces", "serif"],
         body: ["Hind", "sans-serif"],
         sub: ["Roboto Mono", "sans-serif"],
         sans: ["Hind", ...fontFamily.sans]
