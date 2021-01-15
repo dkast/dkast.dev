@@ -9,7 +9,7 @@ import PostItem from "../components/postItem";
 const Home = props => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
-      <h1 className="font-display font-semibold text-5xl mb-6">
+      <h1 className="font-display font-semibold lg:text-5xl text-4xl mb-6">
         Hola,
         <br />
         mi nombre es{" "}
@@ -17,7 +17,7 @@ const Home = props => (
           Daniel Castillejo
         </span>
       </h1>
-      <h2 className="font-display text-2xl">
+      <h2 className="font-display text-xl lg:text-2xl">
         Soy Desarrollador de Software, entusiasta del Diseño y amante de la
         Música.
       </h2>
