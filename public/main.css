@@ -1,35 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Bitter:400,400i,700|Hind:300,400,700&display=swap");
-
 @tailwind base;
-
-p {
-  @apply mb-6;
-}
-
-p > a {
-  @apply text-red-500;
-}
-
-p > a:hover {
-  @apply text-red-700;
-}
-
-h1 {
-  @apply text-4xl font-display mb-2 text-gray-900;
-}
-
-h2 {
-  @apply text-3xl font-display mb-2 text-gray-900;
-}
-
-h3 {
-  @apply text-2xl font-display mb-2 text-gray-900;
-}
-
-.bg-dark-mode {
-  background-color: #121212;
-}
-
 @tailwind components;
-
 @tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Fraunces:400,400i,700|Hind:300,400,700&display=swap");
+
+  h1 {
+    @apply font-display mb-2 text-gray-900;
+  }
+
+  h2 {
+    @apply font-display mb-2 text-gray-900;
+  }
+
+  h3 {
+    @apply font-display mb-2 text-gray-900;
+  }
+}

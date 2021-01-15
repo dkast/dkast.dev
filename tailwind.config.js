@@ -1,19 +1,27 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+
 module.exports = {
+  purge: ["./pages/**/*.js", "./components/**/*.js"],
   theme: {
-    fontFamily: {
-      display: ["Bitter", "sans-serif"],
-      body: ["Hind", "sans-serif"],
-      sub: ["Roboto Mono", "sans-serif"]
-    },
     extend: {
       colors: {
-        "dark-gray": "#121212"
+        orange: colors.orange
       },
-      screens: {
-        "dark-mode": { raw: "(prefers-color-scheme: dark)" }
+      fontFamily: {
+        display: ["Fraunces", "serif"],
+        body: ["Hind", "sans-serif"],
+        sub: ["Roboto Mono", "sans-serif"],
+        sans: ["Hind", ...fontFamily.sans]
+      },
+      typography: theme => {
+        DEFAULT: {
+          css: {
+            color: theme("colors.gray.700");
+          }
+        }
       }
     }
   },
-  variants: {},
-  plugins: [require("@tailwindcss/ui")]
+  plugins: [require("@tailwindcss/typography")]
 };

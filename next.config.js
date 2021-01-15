@@ -2,6 +2,11 @@ require("dotenv").config();
 const webpack = require("webpack");
 
 module.exports = {
+  images: {
+    domains: [
+      "source.unsplash.com" //unsplash
+    ]
+  },
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
