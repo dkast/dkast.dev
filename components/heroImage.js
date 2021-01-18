@@ -7,15 +7,15 @@ const HeroImage = ({ unsplashId }) => {
     return null;
   }
 
-  const imageUrl = `https://source.unsplash.com/${unsplashId}/1000x400`;
+  const imageUrl = `https://source.unsplash.com/${unsplashId}/1000x500`;
   return (
-    <div className="my-8">
+    <div>
       <Image
         src={imageUrl}
         alt="hero"
         className="object-cover h-auto w-full rounded"
         width={1000}
-        height={400}
+        height={500}
       />
       <div className="text-center text-gray-500 text-sm pt-1">
         Fuente: &nbsp;

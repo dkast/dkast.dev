@@ -6,17 +6,17 @@ const Footer = () => (
       Creado por Daniel Castillejo. Construido con Next.js
     </span>
     <div className="flex items-center inline-block">
-      <div className="hover:bg-gray-900 hover:text-white text-gray-600 rounded-full mx-2">
+      <div className="transition duration-300 hover:bg-gray-900 hover:text-white text-gray-600 rounded-full mx-2">
         <a href="https:\\github.com\dkast" className="p-2 block">
           <GitHub></GitHub>
         </a>
       </div>
-      <div className="hover:bg-blue-300 hover:text-blue-600 text-gray-600 rounded-full mx-2">
+      <div className="transition duration-300 hover:bg-blue-400 hover:text-white text-gray-600 rounded-full mx-2">
         <a href="https:\\twitter.com\dkast" className="p-2 block">
           <Twitter></Twitter>
         </a>
       </div>
-      <div className="hover:bg-pink-600 hover:text-white text-gray-600 rounded-full mx-2">
+      <div className="transition duration-300 hover:bg-pink-600 hover:text-white text-gray-600 rounded-full mx-2">
         <a href="https:\\instragram.com\dkast" className="p-2 block">
           <Instagram></Instagram>
         </a>

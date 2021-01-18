@@ -11,7 +11,7 @@ const About = ({ mdxSource }) => {
 
   return (
     <Layout>
-      <div className="mt-24 lg:w-2/3 xl:w-1/2 mx-6 mb-16 lg:mx-auto">
+      <div className="mt-24 max-w-2xl mb-16 mx-auto">
         <div className="prose lg:prose-lg prose-red max-w-none">{content}</div>
       </div>
     </Layout>

@@ -6,7 +6,7 @@ import Icon from "./icon";
 const Nav = () => (
   <nav className="flex justify-between items-center mt-8 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
     <Link href="/">
-      <a>
+      <a className="transition duration-300 transform hover:scale-110">
         <Icon width="40" height="40" bgColor="#1A202C"></Icon>
       </a>
     </Link>

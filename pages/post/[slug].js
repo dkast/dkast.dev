@@ -18,7 +18,7 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
         <title>{post.fields.title} - Daniel Castillejo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="my-16 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
+      <div className="mt-16 mb-8 max-w-2xl mx-auto">
         <h1 className="font-display font-bold text-3xl lg:text-5xl text-center">
           {post.fields.title}
         </h1>
@@ -31,8 +31,12 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
             {readingTime} min
           </span>
         </div>
+      </div>
+      <div className="lg:w-2/3 xl:w-1/2 mx-auto">
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
-        <div className="prose lg:prose-lg prose-red max-w-none mt-8 lg:mt-16">
+      </div>
+      <div className="my-8 max-w-2xl mx-auto">
+        <div className="prose lg:prose-lg prose-red max-w-none mt-8 lg:mt-18">
           {content}
         </div>
       </div>
