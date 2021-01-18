@@ -21,18 +21,18 @@ const Home = props => (
         Soy Desarrollador de Software, entusiasta del Diseño y amante de la
         Música.
       </h2>
-      <div className="flex justify-between w-1/3 mt-8 mb-32">
-        <div className="hover:bg-gray-900 hover:text-white text-gray-600 rounded-full">
+      <div className="flex justify-between w-2/3 lg:w-1/3 mt-8 mb-32">
+        <div className="transition duration-300 transform hover:scale-110 hover:bg-gray-900 hover:text-white text-gray-600 rounded-full">
           <a href="https:\\github.com\dkast" className="p-2 block">
             <GitHub></GitHub>
           </a>
         </div>
-        <div className="hover:bg-blue-300 hover:text-blue-600 text-gray-600 rounded-full">
+        <div className="transition duration-300 transform hover:scale-110 hover:bg-blue-400 hover:text-white text-gray-600 rounded-full">
           <a href="https:\\twitter.com\dkast" className="p-2 block">
             <Twitter></Twitter>
           </a>
         </div>
-        <div className="hover:bg-pink-600 hover:text-white text-gray-600 rounded-full">
+        <div className="transition duration-300 transform hover:scale-110 hover:bg-pink-600 hover:text-white text-gray-600 rounded-full">
           <a href="https:\\instragram.com\dkast" className="p-2 block">
             <Instagram></Instagram>
           </a>
