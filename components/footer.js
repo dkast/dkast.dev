@@ -5,7 +5,7 @@ const Footer = () => (
     <span className="font-sub tracking-tight text-gray-600 text-sm">
       Creado por Daniel Castillejo. Construido con Next.js
     </span>
-    <div className="flex items-center inline-block">
+    <div className="flex items-center">
       <div className="transition duration-300 hover:bg-gray-900 hover:text-white text-gray-600 rounded-full mx-2">
         <a href="https:\\github.com\dkast" className="p-2 block">
           <GitHub></GitHub>
