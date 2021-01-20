@@ -35,7 +35,7 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
       <div className="lg:w-2/3 xl:w-1/2 mx-auto">
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
       </div>
-      <div className="my-8 max-w-2xl mx-auto">
+      <div className="py-8 max-w-2xl mx-auto">
         <div className="prose lg:prose-lg prose-red max-w-none mt-8 lg:mt-18">
           {content}
         </div>

@@ -7,7 +7,7 @@ const PostItem = ({ post }) => (
   <div className="mb-6">
     <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
       <a>
-        <h3 className="text-2xl lg:text-3xl font-display font-bold text-red-600 hover:text-red-500">
+        <h3 className="text-2xl lg:text-3xl font-display font-bold text-red-500 hover:text-red-600">
           {post.fields.title}
         </h3>
       </a>
