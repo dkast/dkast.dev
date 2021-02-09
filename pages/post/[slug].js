@@ -6,6 +6,7 @@ import readingTime from "reading-time";
 import { BookOpen } from "react-feather";
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
+import Icon from "supercons";
 
 import Layout from "../../components/layout";
 import HeroImage from "../../components/heroImage";
@@ -27,7 +28,8 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
             {publishDate}
           </span>
           <span className="text-gray-600 ml-6 font-sub tracking-tight">
-            <BookOpen className="inline mx-2" size={16}></BookOpen>
+            {/* <BookOpen className="inline mx-2" size={16}></BookOpen> */}
+            <Icon glyph="clock" size="20" className="inline mx-2"></Icon>
             {readingTime} min
           </span>
         </div>
