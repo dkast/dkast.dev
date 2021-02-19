@@ -4,8 +4,8 @@
   "alias": "dkast",
   "build": {
     "env": {
-      "SPACE_ID": "@blog_spaceid",
-      "ACCESS_TOKEN": "@blog_accesstoken"
+      "NEXT_PUBLIC_SPACE_ID": "@blog_spaceid",
+      "NEXT_PUBLIC_ACCESS_TOKEN": "@blog_accesstoken"
     }
   }
 }
