@@ -21,17 +21,17 @@ const Home = props => (
         Música.
       </h2>
       <div className="flex justify-between w-2/3 lg:w-1/3 mt-8 mb-32">
-        <div className="transition duration-300 transform hover:scale-110 hover:text-gray-900 text-gray-700 rounded-full">
+        <div className="transition duration-300 transform hover:scale-110 hover:text-gray-900 text-gray-400 rounded-full">
           <a href="https:\\github.com\dkast" className="p-2 block">
             <Icon glyph="github-fill" size={40} />
           </a>
         </div>
-        <div className="transition duration-300 transform hover:scale-110 hover:text-blue-400 text-gray-700 rounded-full">
+        <div className="transition duration-300 transform hover:scale-110 hover:text-blue-400 text-gray-400 rounded-full">
           <a href="https:\\twitter.com\dkast" className="p-2 block">
             <Icon glyph="twitter-fill" size={40} />
           </a>
         </div>
-        <div className="transition duration-300 transform hover:scale-110 hover:text-pink-600 text-gray-700 rounded-full">
+        <div className="transition duration-300 transform hover:scale-110 hover:text-pink-600 text-gray-400 rounded-full">
           <a href="https:\\instragram.com\dkast" className="p-2 block">
             <Icon glyph="instagram-fill" size={40} />
           </a>
@@ -47,8 +47,8 @@ const Home = props => (
 
 Home.getInitialProps = async () => {
   const client = createClient({
-    space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN
+    space: process.env.NEXT_PUBLIC_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN
   });
 
   const res = await client.getEntries({

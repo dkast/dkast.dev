@@ -47,8 +47,8 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
 Post.getInitialProps = async context => {
   const { slug } = context.query;
   const client = createClient({
-    space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN
+    space: process.env.NEXT_PUBLIC_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN
   });
 
   const postQuery = await client.getEntries({
