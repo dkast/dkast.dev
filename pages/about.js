@@ -5,6 +5,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 
 import Layout from "../components/layout";
+import { getPageContent } from "../lib/cms";
 
 const About = ({ mdxSource }) => {
   const content = hydrate(mdxSource, {});
@@ -18,24 +19,10 @@ const About = ({ mdxSource }) => {
   );
 };
 
-About.getInitialProps = async () => {
-  const client = createClient({
-    space: process.env.NEXT_PUBLIC_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN
-  });
+export const getStaticProps = async () => {
+  const mdxSource = await getPageContent("about");
 
-  const pageQuery = await client.getEntries({
-    content_type: "page",
-    "fields.menuId": "about"
-  });
-
-  const page = pageQuery.items[0];
-  const mdxSource = await renderToString(page.fields.body, {});
-
-  return {
-    page: page,
-    mdxSource: mdxSource
-  };
+  return { props: { mdxSource } };
 };
 
 export default About;
