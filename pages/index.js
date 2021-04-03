@@ -1,11 +1,11 @@
 import React from "react";
-import { createClient } from "contentful";
 import Icon from "supercons";
 
 import Layout from "../components/layout";
 import PostItem from "../components/postItem";
+import { getAllPostsForHome } from "../lib/cms";
 
-const Home = props => (
+const Home = ({ posts }) => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mb-16 lg:mx-auto">
       <h1 className="font-display font-semibold lg:text-5xl text-4xl mb-6">
@@ -38,27 +38,19 @@ const Home = props => (
         </div>
       </div>
       <h2 className="font-body text-xl mb-4 text-gray-600">Últimas entradas</h2>
-      {props.posts.map(post => (
+      {posts.map(post => (
         <PostItem key={post.sys.id} post={post} />
       ))}
     </div>
   </Layout>
 );
 
-Home.getInitialProps = async () => {
-  const client = createClient({
-    space: process.env.NEXT_PUBLIC_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN
-  });
-
-  const res = await client.getEntries({
-    content_type: "blogPost",
-    limit: 10,
-    order: "-sys.createdAt"
-  });
+export const getStaticProps = async () => {
+  const posts = await getAllPostsForHome();
 
   return {
-    posts: res.items
+    props: { posts },
+    revalidate: 60
   };
 };
 
