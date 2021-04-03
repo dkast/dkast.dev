@@ -54,7 +54,8 @@ export const getStaticProps = async ({ params }) => {
       mdxSource: data?.mdxSource ?? null,
       readingTime: data?.readingTime ?? 0,
       publishDate: data?.publishDate
-    }
+    },
+    revalidate: 60
   };
 };
 

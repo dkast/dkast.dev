@@ -17,6 +17,7 @@ const PostItem = ({ post }) => (
         locale: esLocale
       })}
     </span>
+    <span className="block mt-2">{post.fields.excerpt}</span>
   </div>
 );
 
