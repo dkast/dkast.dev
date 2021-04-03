@@ -62,7 +62,7 @@ export const getStaticPaths = async () => {
   const allPosts = await getAllPosts();
   return {
     paths: allPosts?.map(post => `/post/${post.fields.slug}`) ?? [],
-    fallback: true
+    fallback: "blocking"
   };
 };
 

@@ -49,7 +49,8 @@ export const getStaticProps = async () => {
   const posts = await getAllPostsForHome();
 
   return {
-    props: { posts }
+    props: { posts },
+    revalidate: 10
   };
 };
 
