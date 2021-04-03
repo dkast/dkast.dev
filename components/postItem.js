@@ -4,7 +4,7 @@ import esLocale from "date-fns/locale/es";
 import format from "date-fns/format";
 
 const PostItem = ({ post }) => (
-  <div className="mb-6">
+  <div className="mb-10">
     <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
       <a>
         <h3 className="text-2xl lg:text-3xl font-display font-bold text-red-500 hover:text-red-600">
