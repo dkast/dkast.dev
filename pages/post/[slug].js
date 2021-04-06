@@ -1,9 +1,4 @@
-import { createClient } from "contentful";
 import Head from "next/head";
-import esLocale from "date-fns/locale/es";
-import format from "date-fns/format";
-import readingTime from "reading-time";
-import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import Icon from "supercons";
 
