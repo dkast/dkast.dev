@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        orange: colors.orange
+        orange: colors.orange,
+        trueGray: colors.trueGray,
+        cyan: colors.cyan
       },
       fontFamily: {
         display: ["Fraunces", "serif"],

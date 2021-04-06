@@ -19,20 +19,19 @@
 }
 
 .prose pre {
-  @apply bg-gray-700;
+  @apply bg-trueGray-900;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @apply text-gray-100;
+  @apply text-gray-400;
 }
 
 .token.punctuation {
-  @apply text-gray-100;
+  @apply text-gray-300;
 }
-
 .token.property,
 .token.tag,
 .token.boolean,
@@ -40,7 +39,7 @@
 .token.constant,
 .token.symbol,
 .token.deleted {
-  @apply text-green-500;
+  @apply text-orange-400;
 }
 
 .token.selector,
@@ -49,7 +48,7 @@
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-purple-500;
+  @apply text-red-400;
 }
 
 .token.operator,
@@ -57,24 +56,28 @@
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  @apply text-yellow-500;
+  @apply text-cyan-300;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  @apply text-blue-500;
+  @apply text-red-400;
 }
 
 .token.function,
 .token.class-name {
-  @apply text-pink-500;
+  @apply text-purple-300;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  @apply text-yellow-500;
+  @apply text-blue-500;
+}
+
+.token.control-flow {
+  @apply text-blue-400;
 }
 
 code[class*="language-"],
