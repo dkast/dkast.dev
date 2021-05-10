@@ -3,7 +3,7 @@ import Icon from "supercons";
 const Footer = () => (
   <div className="lg:w-2/3 xl:w-1/2 mx-6 my-6 lg:mx-auto flex items-center justify-between">
     <span className="font-sub tracking-tight text-gray-600 text-sm">
-      Creado por Daniel Castillejo. Construido con Next.js
+      Creado por Daniel Castillejo. Construido con Next.js y Tailwind CSS
     </span>
     <div className="flex items-center">
       <div className="transition duration-300 hover:bg-gray-900 hover:text-white text-gray-400 rounded-full mx-2">
