@@ -1,8 +1,10 @@
 import React from "react";
 import App from "next/app";
 import NextNprogress from "nextjs-progressbar";
+import { DefaultSeo } from "next-seo";
 
 import "../public/main.css";
+import SEO from "../next-seo.config";
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -26,6 +28,7 @@ class MyApp extends App {
           height="2"
           options={{ showSpinner: false }}
         ></NextNprogress>
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </>
     );
