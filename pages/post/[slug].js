@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Icon from "supercons";
 import { NextSeo } from "next-seo";
-import hydrate from "next-mdx-remote/hydrate";
+import { MDXRemote } from "next-mdx-remote";
 import { useRouter } from "next/dist/client/router";
 
 import Layout from "../../components/layout";
@@ -10,7 +10,6 @@ import { getAllPosts, getPostAndMorePosts } from "../../lib/cms";
 
 const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
   const router = useRouter();
-  const content = hydrate(mdxSource, {});
   return (
     <Layout>
       <Head>
@@ -55,7 +54,7 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
       </div>
       <div className="py-8 max-w-2xl mx-auto">
         <div className="prose lg:prose-lg prose-red max-w-none mt-8 lg:mt-18">
-          {content}
+          <MDXRemote {...mdxSource} />
         </div>
       </div>
     </Layout>

@@ -3,7 +3,7 @@ import App from "next/app";
 import NextNprogress from "nextjs-progressbar";
 import { DefaultSeo } from "next-seo";
 
-import "../public/main.css";
+import "../styles/globals.css";
 import SEO from "../next-seo.config";
 
 class MyApp extends App {
