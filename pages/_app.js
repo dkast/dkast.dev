@@ -1,10 +1,11 @@
 import React from "react";
 import App from "next/app";
-import NextNprogress from "nextjs-progressbar";
 import { DefaultSeo } from "next-seo";
+import { ThemeProvider } from "next-themes";
+import NextNprogress from "nextjs-progressbar";
 
-import "../styles/globals.css";
-import SEO from "../next-seo.config";
+import "@styles/globals.css";
+import SEO from "next-seo.config";
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -29,7 +30,9 @@ class MyApp extends App {
           options={{ showSpinner: false }}
         ></NextNprogress>
         <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        <ThemeProvider attribute="class">
+          <Component {...pageProps} />
+        </ThemeProvider>
       </>
     );
   }
