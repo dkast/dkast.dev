@@ -16,19 +16,26 @@ const Nav = () => {
     <nav className="flex justify-between items-center mt-8 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
       <Link href="/">
         <a className="transition duration-300 transform hover:scale-110">
-          <Icon width="40" height="40" bgColor="#1A202C"></Icon>
+          <Icon
+            width="40"
+            height="40"
+            bgColor={resolvedTheme === "dark" ? "#262626" : "#1A202C"}
+          ></Icon>
         </a>
       </Link>
-      <ul className="font-sub font-bold flex space-x-8">
+      <ul className="font-sub font-bold flex space-x-8 items-center">
         <li>
           <Link href="/about">
-            <a className="hover:text-gray-600">Acerca</a>
+            <a className="dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+              Acerca
+            </a>
           </Link>
         </li>
         <li>
           <button
             aria-label="Switch a Modo Oscuro"
             type="button"
+            className="text-gray-600 dark:text-gray-400 rounded-full p-1 transition transform active:scale-90 hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none"
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
@@ -36,7 +43,7 @@ const Nav = () => {
             {mounted && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

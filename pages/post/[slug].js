@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Icon from "supercons";
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 import { MDXRemote } from "next-mdx-remote";
 import { useRouter } from "next/dist/client/router";
@@ -36,16 +37,24 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
         }}
       />
       <div className="mt-16 mb-8 max-w-2xl mx-auto">
-        <h1 className="font-display font-bold text-3xl lg:text-5xl text-center">
+        <h1 className="font-display font-bold text-3xl lg:text-5xl text-center dark:text-gray-200">
           {post.fields.title}
         </h1>
-        <div className="text-center mt-4">
-          <span className="text-gray-600 font-sub tracking-tight">
-            {publishDate}
-          </span>
-          <span className="text-gray-600 ml-6 font-sub tracking-tight">
-            <Icon glyph="clock" size="20" className="inline mx-2"></Icon>
-            {readingTime} min
+        <div className="text-center text-sm mt-8 flex space-x-8 items-center justify-center text-gray-600 dark:text-gray-400 font-sub tracking-tight">
+          <div className="flex items-center space-x-2">
+            <Image
+              alt="Daniel Castillejo"
+              width={24}
+              height={24}
+              src="/avatar.jpg"
+              className="rounded-full shadow"
+            ></Image>
+            <span>Daniel Castillejo</span>
+          </div>
+          <span>{publishDate}</span>
+          <span className="flex space-x-2 items-center">
+            <Icon glyph="clock" size="20" className="inline"></Icon>
+            <span>{readingTime} min</span>
           </span>
         </div>
       </div>
@@ -53,7 +62,7 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
       </div>
       <div className="py-8 max-w-2xl mx-auto">
-        <div className="prose lg:prose-lg prose-red max-w-none mt-8 lg:mt-18">
+        <div className="prose lg:prose-lg prose-red dark:prose-light max-w-none mt-8 lg:mt-18">
           <MDXRemote {...mdxSource} />
         </div>
       </div>
