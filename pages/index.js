@@ -1,14 +1,14 @@
 import React from "react";
 import Icon from "supercons";
 
-import Layout from "../components/layout";
-import PostItem from "../components/postItem";
-import { getAllPostsForHome } from "../lib/cms";
+import Layout from "@components/layout";
+import PostItem from "@components/postItem";
+import { getAllPostsForHome } from "@lib/cms";
 
 const Home = ({ posts }) => (
   <Layout>
     <div className="mt-24 lg:w-2/3 xl:w-1/2 mb-16 lg:mx-auto">
-      <h1 className="font-display font-semibold lg:text-5xl text-4xl mb-6">
+      <h1 className="font-display font-semibold lg:text-5xl text-4xl mb-6 dark:text-gray-200">
         Hola,
         <br />
         mi nombre es{" "}
@@ -16,12 +16,12 @@ const Home = ({ posts }) => (
           Daniel Castillejo
         </span>
       </h1>
-      <h2 className="text-gray-700 font-body text-xl lg:text-2xl">
+      <h2 className="text-gray-700 dark:text-gray-400 font-body text-xl lg:text-2xl">
         Soy Desarrollador de Software, entusiasta del Diseño y amante de la
         Música.
       </h2>
       <div className="flex justify-between w-2/3 lg:w-1/3 mt-8 mb-32">
-        <div className="transition duration-300 transform hover:scale-110 hover:text-gray-900 text-gray-400 rounded-full">
+        <div className="transition duration-300 transform hover:scale-110 hover:text-gray-900 dark:hover:text-gray-300 text-gray-400 rounded-full">
           <a href="https:\\github.com\dkast" className="p-2 block">
             <Icon glyph="github-fill" size={40} />
           </a>
@@ -37,7 +37,9 @@ const Home = ({ posts }) => (
           </a>
         </div>
       </div>
-      <h2 className="font-body text-xl mb-4 text-gray-600">Últimas entradas</h2>
+      <h2 className="font-body text-xl mb-4 text-gray-600 dark:text-gray-200">
+        Últimas entradas
+      </h2>
       {posts.map(post => (
         <PostItem key={post.sys.id} post={post} />
       ))}

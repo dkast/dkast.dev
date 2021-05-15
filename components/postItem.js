@@ -12,12 +12,12 @@ const PostItem = ({ post }) => (
         </h3>
       </a>
     </Link>
-    <span className="text-gray-600 font-body">
+    <span className="text-gray-600 dark:text-gray-400 font-body">
       {format(new Date(post.sys.createdAt), "dd LLL, yyyy", {
         locale: esLocale
       })}
     </span>
-    <span className="block mt-2">{post.fields.excerpt}</span>
+    <span className="block mt-2 dark:text-gray-200">{post.fields.excerpt}</span>
   </div>
 );
 

@@ -12,7 +12,7 @@ const About = ({ mdxSource }) => {
         <title>Acerca de mi - Daniel Castillejo</title>
       </Head>
       <div className="mt-24 max-w-2xl mb-16 mx-auto">
-        <div className="prose lg:prose-lg prose-red max-w-none">
+        <div className="prose lg:prose-lg prose-red dark:prose-light max-w-none">
           <MDXRemote {...mdxSource} />
         </div>
       </div>
