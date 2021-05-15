@@ -49,7 +49,7 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
               src="/avatar.jpg"
               className="rounded-full shadow"
             ></Image>
-            <span>Daniel Castillejo</span>
+            <span className="hidden sm:inline">Daniel Castillejo</span>
           </div>
           <span>{publishDate}</span>
           <span className="flex space-x-2 items-center">
