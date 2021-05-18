@@ -2,7 +2,7 @@ import React from "react";
 import App from "next/app";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
-import NextNprogress from "nextjs-progressbar";
+import NextNprogress from "nextjs-progressbar-withdelay";
 
 import "@styles/globals.css";
 import SEO from "next-seo.config";
@@ -28,6 +28,7 @@ class MyApp extends App {
           color="#F56565"
           height="2"
           options={{ showSpinner: false }}
+          startDelayMs={400}
         ></NextNprogress>
         <DefaultSeo {...SEO} />
         <ThemeProvider attribute="class">
