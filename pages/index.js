@@ -42,13 +42,13 @@ const Home = ({ posts }) => {
         <h2 className="font-body text-xl mb-4 text-gray-600 dark:text-gray-200">
           Últimas entradas
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch">
           {posts.map((post, index) => {
             return index <= 1 ? (
               <PostCard
                 key={post.sys.id}
                 post={post}
-                className="mb-10 col-span-1 place-self-stretch"
+                className="mb-10 col-span-1"
               />
             ) : (
               <PostItem
