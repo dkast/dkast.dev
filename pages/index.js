@@ -14,7 +14,7 @@ const Home = ({ posts }) => {
           Hola,
           <br />
           mi nombre es{" "}
-          <span className="bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-500 to-orange-400 dark:from-red-400 dark:to-pink-400 bg-clip-text text-transparent">
             Daniel Castillejo
           </span>
         </h1>
