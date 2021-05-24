@@ -1,9 +1,10 @@
 import Head from "next/head";
 
-import Nav from "./nav";
-import Footer from "./footer";
+import Nav from "@components/nav";
+import Footer from "@components/footer";
+import Alert from "@components/alert";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, preview }) => (
   <>
     <Head>
       <title>Daniel Castillejo</title>
@@ -16,6 +17,7 @@ const Layout = ({ children }) => (
       ></meta>
     </Head>
     <div className="flex flex-col min-h-screen bg-white dark:bg-trueGray-900">
+      {preview ? <Alert /> : null}
       <Nav></Nav>
       <div className="flex-grow px-6">{children}</div>
       <Footer></Footer>
