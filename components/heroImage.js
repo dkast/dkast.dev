@@ -13,7 +13,7 @@ const HeroImage = ({ unsplashId }) => {
       <Image
         src={imageUrl}
         alt="hero"
-        className="object-cover h-auto w-full rounded"
+        className="object-cover h-auto w-full rounded-lg"
         width={1000}
         height={500}
       />
