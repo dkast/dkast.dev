@@ -9,10 +9,17 @@ import Layout from "../../components/layout";
 import HeroImage from "../../components/heroImage";
 import { getAllPosts, getPostAndMorePosts } from "../../lib/cms";
 
-const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
+const Post = ({
+  post,
+  relatedPosts,
+  mdxSource,
+  readingTime,
+  publishDate,
+  preview
+}) => {
   const router = useRouter();
   return (
-    <Layout>
+    <Layout preview={preview}>
       <Head>
         <title>{post.fields.title} - Daniel Castillejo</title>
       </Head>
@@ -70,15 +77,16 @@ const Post = ({ post, relatedPosts, mdxSource, readingTime, publishDate }) => {
   );
 };
 
-export const getStaticProps = async ({ params }) => {
-  const data = await getPostAndMorePosts(params.slug);
+export const getStaticProps = async ({ params, preview = false }) => {
+  const data = await getPostAndMorePosts(params.slug, preview);
   return {
     props: {
       post: data?.post ?? null,
       relatedPosts: data?.relatedPosts ?? null,
       mdxSource: data?.mdxSource ?? null,
       readingTime: data?.readingTime ?? 0,
-      publishDate: data?.publishDate
+      publishDate: data?.publishDate,
+      preview
     },
     revalidate: 60
   };
