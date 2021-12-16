@@ -16,11 +16,13 @@ const Nav = () => {
     <nav className="flex justify-between items-center mt-8 lg:w-2/3 xl:w-1/2 mx-6 lg:mx-auto">
       <Link href="/">
         <a className="transition duration-300 transform hover:scale-110">
-          <Icon
-            width="40"
-            height="40"
-            bgColor={resolvedTheme === "dark" ? "#262626" : "#1A202C"}
-          ></Icon>
+          {mounted && (
+            <Icon
+              width="40"
+              height="40"
+              bgColor={resolvedTheme === "dark" ? "#262626" : "#1A202C"}
+            ></Icon>
+          )}
         </a>
       </Link>
       <ul className="font-sub font-bold flex space-x-8 items-center">

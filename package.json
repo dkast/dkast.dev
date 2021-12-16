@@ -1,6 +1,6 @@
 {
-  "name": "dkast.now.sh",
-  "version": "0.1.0",
+  "name": "dkast.dev",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
