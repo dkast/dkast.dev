@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Image from "next/image";
 
 const HeroImage = ({ unsplashId }) => {
@@ -25,10 +24,6 @@ const HeroImage = ({ unsplashId }) => {
       </div>
     </div>
   );
-};
-
-HeroImage.propTypes = {
-  unsplashId: PropTypes.string
 };
 
 export default HeroImage;
