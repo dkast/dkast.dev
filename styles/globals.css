@@ -17,7 +17,7 @@
 }
 
 .prose pre {
-  @apply bg-trueGray-800;
+  @apply bg-gray-800;
 }
 
 .token.comment,
@@ -79,7 +79,7 @@
 }
 
 .mdx-marker {
-  @apply bg-trueGray-700 border-l-2 border-yellow-500 rounded-sm;
+  @apply bg-gray-700 border-l-2 border-yellow-500 rounded-sm;
 }
 
 code[class*="language-"],

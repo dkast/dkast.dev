@@ -2,16 +2,12 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.js", "./components/**/*.js"],
+  content: ["./pages/**/*.js", "./components/**/*.js"],
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        orange: colors.orange,
-        cyan: colors.cyan,
-        lime: colors.lime,
-        trueGray: colors.trueGray
+        gray: colors.zinc
       },
       fontFamily: {
         display: ["Fraunces", "serif"],
