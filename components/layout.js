@@ -16,10 +16,10 @@ const Layout = ({ children, preview }) => (
         content="/ms-icon-150x150.png"
       ></meta>
     </Head>
-    <div className="flex flex-col min-h-screen bg-white dark:bg-trueGray-900">
+    <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-gray-900">
       {preview ? <Alert /> : null}
       <Nav></Nav>
-      <div className="flex-grow px-6">{children}</div>
+      <div className="grow px-6">{children}</div>
       <Footer></Footer>
     </div>
   </>
