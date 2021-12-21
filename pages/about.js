@@ -2,8 +2,9 @@ import React from "react";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 
-import Layout from "../components/layout";
-import { getPageContent } from "../lib/cms";
+import Layout from "@components/layout";
+import Markdown from "@components/markdown";
+import { getPageContent } from "@lib/cms";
 
 const About = ({ mdxSource }) => {
   return (
@@ -12,9 +13,9 @@ const About = ({ mdxSource }) => {
         <title>Acerca de mi - Daniel Castillejo</title>
       </Head>
       <div className="mt-24 max-w-2xl mb-16 mx-auto">
-        <div className="prose lg:prose-lg prose-red dark:prose-light max-w-none">
+        <Markdown className="max-w-none">
           <MDXRemote {...mdxSource} />
-        </div>
+        </Markdown>
       </div>
     </Layout>
   );

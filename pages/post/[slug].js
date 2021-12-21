@@ -5,8 +5,9 @@ import { NextSeo } from "next-seo";
 import { MDXRemote } from "next-mdx-remote";
 import { useRouter } from "next/dist/client/router";
 
-import Layout from "../../components/layout";
-import HeroImage from "../../components/heroImage";
+import Layout from "@components/layout";
+import HeroImage from "@components/heroImage";
+import Markdown from "@components/markdown";
 import { getAllPosts, getPostAndMorePosts } from "../../lib/cms";
 
 const Post = ({
@@ -69,9 +70,9 @@ const Post = ({
         <HeroImage unsplashId={post.fields.unsplashId}></HeroImage>
       </div>
       <div className="py-8 max-w-2xl mx-auto">
-        <div className="prose lg:prose-lg prose-red dark:prose-light max-w-none mt-8 lg:mt-18">
+        <Markdown className="max-w-none mt-8 lg:mt-18">
           <MDXRemote {...mdxSource} />
-        </div>
+        </Markdown>
       </div>
     </Layout>
   );

@@ -16,10 +16,6 @@
   }
 }
 
-.prose pre {
-  @apply bg-gray-800;
-}
-
 .token.comment,
 .token.prolog,
 .token.doctype,
