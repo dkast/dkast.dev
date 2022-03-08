@@ -12,22 +12,29 @@ const Home = ({ posts }) => {
   return (
     <Layout>
       <div className="mt-24 lg:w-2/3 xl:w-1/2 mb-16 lg:mx-auto">
-        <div className="grid grid-cols-3 gap-6">
+        <div className="flex flex-row items-center gap-6 bg-white dark:bg-black rounded-xl mb-6">
+          {/* Profile Image */}
+          <div>
+            <Image
+              src={profilePic}
+              alt="Avatar del Autor"
+              width={120}
+              height={120}
+            ></Image>
+          </div>
           {/* Header and Social Networks */}
-          <div className="col-span-2">
-            <h1 className="font-display font-semibold lg:text-5xl text-4xl mb-6 dark:text-gray-200">
-              Hola,
-              <br />
-              mi nombre es{" "}
+          <div>
+            <h1 className="font-display font-semibold lg:text-3xl text-4xl dark:text-gray-200">
+              Hola, mi nombre es{" "}
               <span className="bg-gradient-to-r from-red-500 to-orange-400 dark:from-red-400 dark:to-pink-400 bg-clip-text text-transparent">
                 Daniel Castillejo
               </span>
             </h1>
-            <h2 className="text-gray-700 dark:text-gray-400 font-body text-xl lg:text-2xl">
+            <h2 className="text-gray-700 dark:text-gray-400 font-body text-xl">
               Soy Desarrollador de Software, entusiasta del Diseño y amante de
               la Música.
             </h2>
-            <div className="flex justify-between w-2/3 lg:w-1/3 mt-8 mb-32">
+            {/* <div className="flex justify-between w-2/3 lg:w-1/3 mt-8 mb-32">
               <div className="transition duration-300 transform hover:scale-110 hover:text-gray-900 dark:hover:text-gray-300 text-gray-400 rounded-full">
                 <a href="https:\\github.com\dkast" className="p-2 block">
                   <Icon glyph="github-fill" size={40} />
@@ -43,17 +50,7 @@ const Home = ({ posts }) => {
                   <Icon glyph="instagram-fill" size={40} />
                 </a>
               </div>
-            </div>
-          </div>
-          {/* Profile Image */}
-          <div className="flex justify-center items-start">
-            <Image
-              src={profilePic}
-              alt="Avatar of the Author"
-              width={140}
-              height={140}
-              className="bg-gradient-to-br from-red-500 to-orange-400 dark:from-red-400 dark:to-pink-400 rounded-full"
-            ></Image>
+            </div> */}
           </div>
         </div>
         <h2 className="font-body text-xl mb-4 text-gray-600 dark:text-gray-200">
