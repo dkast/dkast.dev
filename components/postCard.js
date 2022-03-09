@@ -27,7 +27,7 @@ const PostCard = ({ post, className }) => {
           </a>
         </Link>
       </div>
-      <div className="py-4">
+      <div className="pt-4">
         <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
           <a>
             <h3 className="text-2xl font-display font-bold text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">

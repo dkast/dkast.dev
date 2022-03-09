@@ -6,18 +6,19 @@ import format from "date-fns/format";
 const PostItem = ({ post, className }) => (
   <div className={className}>
     <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
-      <a>
-        <h3 className="text-2xl lg:text-3xl font-display font-bold text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">
+      <a className="flex items-center justify-between">
+        <h3 className="text-lg lg:text-xl font-display font-bold inline-block text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">
           {post.fields.title}
         </h3>
+        <span className="text-gray-600 dark:text-gray-400 font-body mb-2">
+          {format(new Date(post.sys.createdAt), "dd LLL, yyyy", {
+            locale: esLocale
+          })}
+        </span>
       </a>
     </Link>
-    <span className="text-gray-600 dark:text-gray-400 font-body">
-      {format(new Date(post.sys.createdAt), "dd LLL, yyyy", {
-        locale: esLocale
-      })}
-    </span>
-    <span className="block mt-2 dark:text-gray-200">{post.fields.excerpt}</span>
+
+    <span className="block dark:text-gray-200">{post.fields.excerpt}</span>
   </div>
 );
 
