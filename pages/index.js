@@ -11,26 +11,25 @@ import profilePic from "../public/memoji.png";
 const Home = ({ posts }) => {
   return (
     <Layout>
-      <div className="mt-24 lg:w-2/3 xl:w-1/2 mb-16 lg:mx-auto">
-        <div className="flex flex-row items-center gap-6 bg-white dark:bg-black rounded-xl mb-6 p-2">
+      <div className="mt-16 lg:w-2/3 xl:w-1/2 mb-16 lg:mx-auto">
+        <div className="flex flex-row items-center gap-6 bg-white dark:bg-black rounded-xl mb-6 px-4 py-2">
           {/* Profile Image */}
-          <div>
-            <Image
-              src={profilePic}
-              alt="Avatar del Autor"
-              width={120}
-              height={120}
-            ></Image>
-          </div>
+          <Image
+            src={profilePic}
+            alt="Avatar del Autor"
+            width={100}
+            height={100}
+            className="rounded-full"
+          ></Image>
           {/* Header and Social Networks */}
           <div>
-            <h1 className="font-display font-semibold lg:text-3xl text-2xl dark:text-gray-200">
+            <h1 className="font-display font-semibold lg:text-3xl text-2xl dark:text-gray-200 mb-1">
               Hola, soy{" "}
               <span className="bg-gradient-to-r from-red-500 to-orange-400 dark:from-red-400 dark:to-pink-400 bg-clip-text text-transparent">
                 Daniel Castillejo
               </span>
             </h1>
-            <h2 className="text-gray-700 dark:text-gray-400 font-body lg:text-xl text-lg">
+            <h2 className="text-gray-700 dark:text-gray-400 font-body lg:text-lg text-base">
               Soy Desarrollador de Software, entusiasta del Diseño y la Música.
             </h2>
           </div>

@@ -19,7 +19,7 @@ const Layout = ({ children, preview }) => (
     <div className="flex flex-col min-h-screen bg-stone-100 dark:bg-gray-900">
       {preview ? <Alert /> : null}
       <Nav></Nav>
-      <div className="grow px-6">{children}</div>
+      <div className="grow px-6 lg:px-0">{children}</div>
       <Footer></Footer>
     </div>
   </>

@@ -4,15 +4,15 @@
 
 @layer base {
   h1 {
-    @apply font-display mb-2 text-gray-900;
+    @apply font-display text-gray-900;
   }
 
   h2 {
-    @apply font-display mb-2 text-gray-900;
+    @apply font-display text-gray-900;
   }
 
   h3 {
-    @apply font-display mb-2 text-gray-900;
+    @apply font-display text-gray-900;
   }
 }
 

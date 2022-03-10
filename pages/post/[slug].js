@@ -50,13 +50,12 @@ const Post = ({
         </h1>
         <div className="text-center text-sm mt-8 flex space-x-8 items-center justify-center text-gray-600 dark:text-gray-400 font-sub tracking-tight">
           <div className="flex items-center space-x-2">
-            <Image
+            {/* <Image
               alt="Daniel Castillejo"
-              width={24}
-              height={24}
-              src="/avatar.jpg"
-              className="rounded-full shadow"
-            ></Image>
+              width={32}
+              height={32}
+              src="/memoji.png"
+            ></Image> */}
             <span className="hidden sm:inline">Daniel Castillejo</span>
           </div>
           <span>{publishDate}</span>
