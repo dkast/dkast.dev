@@ -5,9 +5,9 @@ import { NextSeo } from "next-seo";
 import { MDXRemote } from "next-mdx-remote";
 import { useRouter } from "next/dist/client/router";
 
-import Layout from "@components/layout";
-import HeroImage from "@components/heroImage";
-import Markdown from "@components/markdown";
+import Layout from "@components/Layout";
+import HeroImage from "@components/HeroImage";
+import Markdown from "@components/Markdown";
 import { getAllPosts, getPostAndMorePosts } from "../../lib/cms";
 
 const Post = ({

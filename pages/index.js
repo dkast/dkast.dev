@@ -2,9 +2,9 @@ import React from "react";
 import Icon from "supercons";
 import Image from "next/image";
 
-import Layout from "@components/layout";
-import PostItem from "@components/postItem";
-import PostCard from "@components/postCard";
+import Layout from "@components/Layout";
+import PostItem from "@components/PostItem";
+import PostCard from "@components/PostCard";
 import { getAllPostsForHome } from "@lib/cms";
 import profilePic from "../public/memoji.png";
 

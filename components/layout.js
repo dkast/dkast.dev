@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import Nav from "@components/nav";
-import Footer from "@components/footer";
-import Alert from "@components/alert";
+import Nav from "@components/Nav";
+import Footer from "@components/Footer";
+import Alert from "@components/Alert";
 
 const Layout = ({ children, preview }) => (
   <>

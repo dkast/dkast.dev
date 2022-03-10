@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 
-import Layout from "@components/layout";
-import Markdown from "@components/markdown";
+import Layout from "@components/Layout";
+import Markdown from "@components/Markdown";
 import { getPageContent } from "@lib/cms";
 
 const About = ({ mdxSource }) => {

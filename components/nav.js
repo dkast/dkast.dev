@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-import Icon from "./icon";
+import Icon from "./Icon";
 
 const Nav = () => {
   const [mounted, setMounted] = useState(false);
