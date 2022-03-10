@@ -1,11 +1,5 @@
 {
-  "name": "dkast.now.sh",
+  "name": "dkast.dev",
   "version": 2,
-  "alias": "dkast",
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_SPACE_ID": "@blog_spaceid",
-      "NEXT_PUBLIC_ACCESS_TOKEN": "@blog_accesstoken"
-    }
-  }
+  "alias": "dkast"
 }
