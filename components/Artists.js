@@ -1,14 +1,69 @@
 import React from "react";
+import Image from "next/image";
 
 const Artists = ({ items }) => {
   console.dir(items);
   return (
-    <div>
-      <ul>
-        {items.map(artist => {
-          return <span>{artist.name}</span>;
-        })}
-      </ul>
+    <div className="bg-gradient-to-br from-white via-green-50 to-white p-4 rounded-xl">
+      <h2 className="font-body text-xl mb-4 text-gray-600">🎧 Escuchando</h2>
+      <div className="relative grid grid-cols-3">
+        <div className="flex justify-end">
+          <Image
+            src={items[0].imageUrl}
+            width="100"
+            height="100"
+            className="rounded-full object-cover"
+          ></Image>
+        </div>
+        <div className="col-start-2 flex justify-center col-span-2">
+          <Image
+            src={items[1].imageUrl}
+            width="90"
+            height="90"
+            className="rounded-full object-cover"
+          ></Image>
+        </div>
+        <div className="flex justify-center items-center">
+          <Image
+            src={items[5].imageUrl}
+            width="80"
+            height="80"
+            className="rounded-full object-cover"
+          ></Image>
+        </div>
+        <div className="flex justify-center items-center">
+          <Image
+            src={items[2].imageUrl}
+            width="130"
+            height="130"
+            className="rounded-full object-cover"
+          ></Image>
+        </div>
+        <div className="flex justify-center items-center">
+          <Image
+            src={items[6].imageUrl}
+            width="100"
+            height="100"
+            className="rounded-full object-cover"
+          ></Image>
+        </div>
+        <div className="col-span-2 flex justify-center">
+          <Image
+            src={items[3].imageUrl}
+            width="120"
+            height="120"
+            className="rounded-full object-cover"
+          ></Image>
+        </div>
+        <div>
+          <Image
+            src={items[4].imageUrl}
+            width="70"
+            height="70"
+            className="rounded-full"
+          ></Image>
+        </div>
+      </div>
     </div>
   );
 };

@@ -39,9 +39,9 @@ const Home = ({ posts, artists }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch">
           {/* Column 1 */}
           <div>
-            <div className="rounded-xl bg-white dark:bg-black p-4 space-y-4">
-              <h2 className="font-body text-xl mb-4 text-gray-600 dark:text-gray-200">
-                Últimas entradas
+            <div className="rounded-xl bg-white dark:bg-gray-800 p-4 space-y-6">
+              <h2 className="font-body text-xl -mb-4 text-gray-600 dark:text-gray-200">
+                🖋 Últimas entradas
               </h2>
               {posts.map((post, index) => {
                 return index < 1 ? (

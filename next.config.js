@@ -1,7 +1,8 @@
 module.exports = {
   images: {
     domains: [
-      "source.unsplash.com" //unsplash
+      "source.unsplash.com", //unsplash
+      "i.scdn.co" //spotify
     ]
   }
 };
