@@ -17,6 +17,7 @@ export async function getArtistsData() {
 
   const artists = items.map(artist => ({
     name: artist.name,
+    spotifyUrl: artist.external_urls.spotify,
     imageUrl: artist.images[0].url,
     width: artist.images[0].width,
     height: artist.images[0].height

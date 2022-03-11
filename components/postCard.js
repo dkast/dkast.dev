@@ -13,7 +13,7 @@ const PostCard = ({ post, className }) => {
   }
   return (
     <div className={className}>
-      <div className="rounded-lg shadow-lg transition transform hover:scale-105 ">
+      <div className="rounded-lg shadow-lg transition transform">
         <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
           <a>
             <Image
@@ -24,22 +24,18 @@ const PostCard = ({ post, className }) => {
               height={300}
               layout="responsive"
             />
-          </a>
-        </Link>
-      </div>
-      <div className="pt-4">
-        <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
-          <a>
-            <h3 className="text-2xl font-display font-bold text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">
+            <h3 className="text-xl mt-2 font-display font-bold text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">
               {post.fields.title}
             </h3>
           </a>
         </Link>
-        <span className="text-gray-600 dark:text-gray-400 font-body">
+      </div>
+      <div className="">
+        {/* <span className="text-gray-600 dark:text-gray-400 font-body">
           {format(new Date(post.sys.createdAt), "dd LLL, yyyy", {
             locale: esLocale
           })}
-        </span>
+        </span> */}
         <span className="block mt-2 dark:text-gray-200">
           {post.fields.excerpt}
         </span>

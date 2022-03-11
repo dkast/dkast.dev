@@ -40,8 +40,8 @@ const Home = ({ posts, artists }) => {
           {/* Column 1 */}
           <div>
             <div className="rounded-xl bg-white dark:bg-gray-800 p-4 space-y-6">
-              <h2 className="font-body text-xl -mb-4 text-gray-600 dark:text-gray-200">
-                🖋 Últimas entradas
+              <h2 className="font-body text-xl -mb-2 text-gray-600 dark:text-gray-200">
+                Últimas entradas
               </h2>
               {posts.map((post, index) => {
                 return index < 1 ? (

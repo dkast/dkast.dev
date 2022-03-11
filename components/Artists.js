@@ -4,9 +4,11 @@ import Image from "next/image";
 const Artists = ({ items }) => {
   console.dir(items);
   return (
-    <div className="bg-gradient-to-br from-white via-green-50 to-white p-4 rounded-xl">
-      <h2 className="font-body text-xl mb-4 text-gray-600">🎧 Escuchando</h2>
-      <div className="relative grid grid-cols-3">
+    <div className="bg-white relative p-4 rounded-xl overflow-clip">
+      <div className="absolute top-8 -left-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30"></div>
+      <div className="absolute bottom-8 -right-4 w-72 h-72 bg-lime-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30"></div>
+      <h2 className="font-body text-xl mb-6 text-gray-600">Escuchando</h2>
+      <div className="grid grid-cols-3">
         <div className="flex justify-end">
           <Image
             src={items[0].imageUrl}
