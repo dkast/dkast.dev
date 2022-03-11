@@ -1,14 +1,16 @@
 import React from "react";
-import Icon from "supercons";
+// import Icon from "supercons";
 import Image from "next/image";
 
+import { getAllPostsForHome } from "@lib/cms";
+import { getArtistsData } from "./api/top-artists";
+import profilePic from "../public/memoji.png";
 import Layout from "@components/Layout";
 import PostItem from "@components/PostItem";
 import PostCard from "@components/PostCard";
-import { getAllPostsForHome } from "@lib/cms";
-import profilePic from "../public/memoji.png";
+import Artists from "@components/Artists";
 
-const Home = ({ posts }) => {
+const Home = ({ posts, artists }) => {
   return (
     <Layout>
       <div className="mt-16 lg:w-2/3 xl:w-1/2 mb-16 lg:mx-auto">
@@ -35,17 +37,24 @@ const Home = ({ posts }) => {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch">
-          <div className="rounded-xl bg-white dark:bg-black p-4 space-y-4">
-            <h2 className="font-body text-xl mb-4 text-gray-600 dark:text-gray-200">
-              Últimas entradas
-            </h2>
-            {posts.map((post, index) => {
-              return index < 1 ? (
-                <PostCard key={post.sys.id} post={post} />
-              ) : (
-                <PostItem key={post.sys.id} post={post} />
-              );
-            })}
+          {/* Column 1 */}
+          <div>
+            <div className="rounded-xl bg-white dark:bg-black p-4 space-y-4">
+              <h2 className="font-body text-xl mb-4 text-gray-600 dark:text-gray-200">
+                Últimas entradas
+              </h2>
+              {posts.map((post, index) => {
+                return index < 1 ? (
+                  <PostCard key={post.sys.id} post={post} />
+                ) : (
+                  <PostItem key={post.sys.id} post={post} />
+                );
+              })}
+            </div>
+          </div>
+          {/* Column 2 */}
+          <div>
+            <Artists items={artists}></Artists>
           </div>
         </div>
       </div>
@@ -55,9 +64,10 @@ const Home = ({ posts }) => {
 
 export const getStaticProps = async () => {
   const posts = await getAllPostsForHome();
+  const artists = await getArtistsData();
 
   return {
-    props: { posts },
+    props: { posts, artists },
     revalidate: 60
   };
 };
