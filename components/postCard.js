@@ -13,23 +13,21 @@ const PostCard = ({ post, className }) => {
   }
   return (
     <div className={className}>
-      <div className="rounded-lg shadow-lg transition transform">
-        <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
-          <a>
-            <Image
-              src={imageUrl}
-              alt="hero"
-              className="object-cover rounded-lg transition filter grayscale hover:grayscale-0"
-              width={600}
-              height={300}
-              layout="responsive"
-            />
-            <h3 className="text-xl mt-2 font-display font-bold text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">
-              {post.fields.title}
-            </h3>
-          </a>
-        </Link>
-      </div>
+      <Link href="/post/[pid]" as={`/post/${post.fields.slug}`}>
+        <a>
+          <Image
+            src={imageUrl}
+            alt="hero"
+            className="object-cover rounded-lg shadow-lg filter grayscale hover:grayscale-0"
+            width={600}
+            height={300}
+            layout="responsive"
+          />
+          <h3 className="text-xl mt-2 font-display font-bold text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500">
+            {post.fields.title}
+          </h3>
+        </a>
+      </Link>
       <div className="">
         {/* <span className="text-gray-600 dark:text-gray-400 font-body">
           {format(new Date(post.sys.createdAt), "dd LLL, yyyy", {
